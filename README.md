@@ -38,7 +38,7 @@ HTML 기본 학습
 
 
 ```csharp
-using System.IO;
+using System;
 
 namespace HelloWorldApp {
   public class Program {
