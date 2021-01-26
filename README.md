@@ -1,3 +1,9 @@
+
+
+
+
+
+
 # HTML 학습 리포지토리
 HTML5, CSS3, JS 학습용 리포지토리
 
@@ -11,8 +17,8 @@ HTML 기본 학습
 ### HTML이란?
 개요에 대해서 학습합니다
 1. Hyper Text Markup Language 정의
-2. HTML 역사
-3. HTML5의 차이점
+1. HTML 역사 
+1. HTML5의 차이점
 
 - Hyper Text Markup *Language* 정의
 - __HTML__ _역사_
@@ -20,6 +26,16 @@ HTML 기본 학습
   - UL2
     - SUL3
     - SUL4
+
+* [X] 학습하기
+* [ ] 복습하기
+
++ [X] 학습하기
++ [ ] 복습하기
+
+
+
+
 
 ```csharp
 using System.IO;
@@ -35,11 +51,22 @@ namespace HelloWorldApp {
 ```
 
 
+```
+![풍경](https://libreshot.com/wp-content/uploads/2019/10/green-hills-landscape.jpg)
+```
+
+![실행결과](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/Result_Image/result.PNG "절대경로")
+
+```
+![실행결과](ref_images/console_result.png "상대경로")
+```
+<img src="https://github.com/SeoDongWoo1216/StudyHtml/blob/main/Result_Image/result.PNG" width="400" title="절대경로" alt="실행결과" />
+
 참조링크
 -------
-- [Microsoft](https://www.microsoft.com)
-- [Naver](https://www.naver.com)
-- [Oracle](https://www.oracle.com)
+- [Microsoft](https://www.microsoft.com "마이크로소프트")
+- [Naver](https://www.naver.com "네이버")
+- [Oracle](https://www.oracle.com "오라클")
 
 -------------------------------
 
@@ -67,3 +94,4 @@ Javascript 기본 학습
 
 --------------------------------
 문의메일 : <dw6642@naver.com>
+
