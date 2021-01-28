@@ -4,7 +4,7 @@
 태그, 요소, 속성의 의미 이해 및 HTML, CSS, JS 작성방법 이해
 
 ## HTML5 기본 태그
-'''html
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +20,7 @@
 </body>
 
 </html>
-'''
+```
 
 ## HTML5 입력 태그
 [이전](https://github.com/SeoDongWoo1216/StudyHtml)
