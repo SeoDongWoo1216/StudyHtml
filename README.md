@@ -13,9 +13,8 @@ HTML5, CSS3, JS 학습용 리포지토리
 HTML 기본 학습
 
 ### HTML 기본 학습
-```
 [HTML소스](https://github.com/SeoDongWoo1216/StudyHtml/tree/main/01_HTML)
-```
+
 
 -------------------------------
 
@@ -23,9 +22,8 @@ HTML 기본 학습
 기본 
 
 ### CSS3
-```
 [CSS3소스](https://github.com/SeoDongWoo1216/StudyHtml/tree/main/02_CSS)
-```
+
 -------------------------------
 
 ## Javascript
