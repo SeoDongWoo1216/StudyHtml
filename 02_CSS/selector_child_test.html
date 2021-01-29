@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+
+        /* 후손, 자손 선택자 */
+        #header > h2{
+            color: blue;
+        }
+
+        #header > div > h2{
+            color: red;
+        }
+
+        #section h2 {
+            color: orange;
+        }
+
+        /* 반응선택자 */
+        h2:active{
+            color:white;
+        }
+
+        h2:hover{
+            background-color: black;
+        }
+
+        /* 상태 선택자 */
+        input:focus {
+            background-color: orange;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h2 class="title">Lorem ipsum</h2>
+        <div id="nav">
+            <h2>Navigation</h2>
+        </div>
+        <h3>subtitle</h3>
+    </div>
+
+    <div id="section">
+        <h2 class="title">Lorem ipsum</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat eum, fugit ullam rerum sed nulla
+            reprehenderit aliquid deserunt ut maxime tempora ipsum voluptas accusamus id! Quaerat iusto iure ipsum
+            necessitatibus?</p>
+    </div>
+
+    <div>
+        <form>
+            <label for= "user_id">이름 : </label>
+            <input name = "user_id" type = "text" value ="dw6642"><br>
+            <label for= "user_password">비밀번호 : </label>
+            <input name = "user_password" type = "password" value ="1234" disabled><br>
+            <!-- disabled는 사용하지 않겠다는 뜻-->
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        input[type="text"]{
+            background-color: red;
+        }
+
+        input[type="password"]{
+            background-color: blue;
+        }
+
+        #header{
+            width: 800px; 
+            height: 200px;
+            margin : 0 auto;  /* auto는 자동으로 가운데로 정렬해준다*/
+            background-color: coral;
+        }
+        #wrap{
+            width: 800px; 
+            margin : 0 auto;
+            overflow: hidden;
+        }
+
+        #aside{
+            width: 300px;
+            float: left;
+            background:skyblue;
+        }
+
+        #content{
+            width: 500px;
+            float: right;
+            background-color: blue;
+        }
+
+        #content h1{
+            text-align: right;
+        }
+
+        #content h2{
+            color : white;
+            text-align: right;
+        }
+
+        #content form{
+            color : white;
+            float: right;
+        }
+
+        #footer{
+            width: 800px;
+            margin : 0 auto;
+        }
+
+        /* 클래스 */
+        .fruits{
+            color: red;
+            font-weight: bold;
+        }
+
+        .item{
+            color: salmon;
+        }
+
+        .footer{
+            background-color: silver;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>#header 태그</h1>
+        
+    </div>
+
+    <div id = "wrap">
+        <div id = "aside">
+            <h1>#aside 태그</h1>
+            <ul>
+                <li class = "fruits"><a href = "https://naver.com">사과</a></li>
+                <li><a href = "https://microsoft.com">배</a></li>
+                <li class = "fruits"><a href = "https://oracle.com">딸기</a></li>
+                <li><a href = "https://youtube.com">바나나</a></li>
+                
+            </ul>
+        </div>
+
+        <div id = "content">
+            <h1>#content 태그</h1>
+            <h2>로그인 화면</h2>
+            <form>
+                아이디   : <input type="text"><br>
+                비밀번호 : <input type="password">
+            </form>
+        </div>
+    </div>
+
+    <div id = "footer">
+        <h1 class = "item footer">#footer 태그</h1>  <!-- 두개의 클래스를 겹침 -->
+        <!-- 클래스 footer를 여러번 사용해서 쓸 수 있다는 점을 기억하자. -->
+    </div>
+</body>
+</html>
