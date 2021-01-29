@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /* position: absolute; 겹쳐서 출력되기때문에 맨 마지막 색깔만 출력된다.*/
+            /* position: relative; 3개의 색깔이 각각 띄워서 출력된다.*/
+        }
+
+        /* .box:nth-child(1) {background-color: rgba(255, 0, 0, 0.5);}
+        .box:nth-child(2) {background-color: rgba(0, 255, 0, 0.5);}
+        .box:nth-child(3) {background-color: rgba(0, 0, 255, 0.5);} */
+
+        .box:nth-child(1) {
+            background-color: rgba(255, 0, 0, 1);
+            left: 10px; 
+            top : 10px;
+            z-index: 100;  /*z-index를통해 도형순서(앞뒤순서)를 설정해줄 수 있다.*/
+        }
+
+        .box:nth-child(2) {
+            background-color: rgba(0, 255, 0, 1);
+            left: 50px; 
+            top : 50px;
+            z-index: 50;
+        }
+
+        .box:nth-child(3) {
+            background-color: rgba(0, 0, 255, 1);
+            left: 90px; 
+            top : 90px;
+            z-index: 1;
+        }
+
+        h1{
+            position: absolute;
+            left:200px;
+            top:20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <h1>Lorem ipsum dolor sit amet</h1>
+</body>
+
+</html>
