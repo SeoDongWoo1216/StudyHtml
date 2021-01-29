@@ -19,8 +19,9 @@ HTML 기본 학습
 -------------------------------
 
 ## CSS3
-CSS 기본 학습
-[CSS소스](https://github.com/SeoDongWoo1216/StudyHtml/tree/main/02_CSS)
+
+### CS3S 기본 학습
+[CSS3소스](https://github.com/SeoDongWoo1216/StudyHtml/tree/main/02_CSS)
 -------------------------------
 
 ## Javascript
