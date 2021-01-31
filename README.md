@@ -11,7 +11,6 @@ HTML5, CSS3, JS 학습용 리포지토리
 
 ## HTML5
 > HTML5은 큰 의미로 웹 표준 기술을 총칭하며, CSS3와 Javascript를 모두 포함해서 이야기한다. HTML5는 웹 페이지를 구성하는 마크업언어 그 자체를 이야기하며, 마크업은 웹 페이지의 서식이나 구조를 표현하는 정보이다.
-
 - [HTML소스](https://github.com/SeoDongWoo1216/StudyHtml/tree/main/01_HTML)
 
 
