@@ -1,5 +1,3 @@
-# CSS 기본 학습
-
 ## CSS3 기초
 - [CSS3 기본 태그](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/01_HTML/text_header.html)
 - [기본, 아이디 선택자](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/selector_id_test.html)
