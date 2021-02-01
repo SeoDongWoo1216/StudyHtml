@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>위치 속성 테스트2 </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<style>
+    body > div{
+        width: 400px;
+        height: 100px;
+        border: 5px solid black;  /*밑의 3줄을 합친거임*/
+        /*  solid는 실선
+        border-color: black;
+        border-style: solid; 
+        border-width: 5px;
+        */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .box{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+
+    .box:nth-child(1){
+        background-color: red;
+        left: 10px;
+        top: 10px;
+        z-index: 100;
+    }
+    .box:nth-child(2){
+        background-color: green;
+        left: 50px;
+        top: 50px;
+        z-index: 100;
+    }
+    .box:nth-child(3){
+        background-color: blue;
+        left: 90px;
+        top: 90px;
+        z-index: 100;
+    }
+
+</style>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo maiores enim voluptatum voluptates, earum vero inventore mollitia nam, ipsam quaerat soluta libero deserunt fuga reiciendis officiis itaque. In, nesciunt!</h1>
+    <div>
+        <div class = "box"></div>
+        <div class = "box"></div>
+        <div class = "box"></div>
+    </div>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione at quo quasi omnis rerum ipsa vero praesentium sunt magni, maiores voluptates numquam minima delectus labore debitis officiis earum natus ad.</h1>
+</body>
+</html>
