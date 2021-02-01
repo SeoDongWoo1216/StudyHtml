@@ -1,5 +1,5 @@
 # CSS3 기본학습
-> CSS3를 학습하며 예제 
+> CSS3를 학습하며 예제 작성
 
 ## CSS3 기초
 - [CSS3 기본 태그](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/01_HTML/text_header.html)
