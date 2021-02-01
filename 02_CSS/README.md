@@ -11,7 +11,7 @@
 ## CSS3 속성
 - [박스 테두리](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/box_test.html)
 - [배경 속성](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/background_test.html)
-- [위치속성](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/position_test.html)
+- [위치 속성](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/position_test.html)
 - []
 
 
