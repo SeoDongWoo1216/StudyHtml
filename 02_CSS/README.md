@@ -15,5 +15,4 @@
 - []
 
 
-## HTML5 입력 태그
 [이전](https://github.com/SeoDongWoo1216/StudyHtml)
