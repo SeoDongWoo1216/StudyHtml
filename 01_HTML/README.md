@@ -21,5 +21,6 @@
 - [공간 분할](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/01_HTML/div_test.html)
 - [시멘틱태그](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/01_HTML/space_test.html)
 
-## HTML5 입력 태그
+
+
 [이전](https://github.com/SeoDongWoo1216/StudyHtml)
