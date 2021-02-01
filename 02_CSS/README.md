@@ -1,4 +1,5 @@
-# CSS 기본 학습
+# CSS3 기본학습
+> CSS3를 학습하며 예제 작성
 
 ## CSS3 기초
 - [CSS3 기본 태그](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/01_HTML/text_header.html)
@@ -10,9 +11,8 @@
 ## CSS3 속성
 - [박스 테두리](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/box_test.html)
 - [배경 속성](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/background_test.html)
-- [위치속성](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/position_test.html)
+- [위치 속성](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/position_test.html)
 - []
 
 
-## HTML5 입력 태그
 [이전](https://github.com/SeoDongWoo1216/StudyHtml)
