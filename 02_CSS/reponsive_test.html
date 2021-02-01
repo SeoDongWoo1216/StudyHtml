@@ -3,10 +3,22 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Responsive Web Test</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="styles/screen.css" media="screen">
-    <link rel="stylesheet" href="styles/printf.css" media="print">
+    <style>  /* 크기에따라(컨트롤 + 마우스 휠) 색깔을 조절 */
+    @media (max-width: 499px) {
+        body { background: red; }
+    }
+
+    @media (min-width: 500px) and (max-width: 799px) {
+        body { background: green; }
+    }
+
+    @media (min-width: 800px) {
+        body { background: blue; }
+    }
+   </style>
+    
 </head>
 <body>
     <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam explicabo vel ea, magnam illo, recusandae quasi eaque provident ut, cupiditate praesentium odit quidem quas illum sapiente necessitatibus nihil. Aliquam, sint?</h1>
