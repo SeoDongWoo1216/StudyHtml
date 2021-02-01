@@ -21,7 +21,7 @@
 - [One True](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/layout_onetrue_test.html)
 - [절대 위치를 사용한 요소 배치](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/position_test_3.html)
 
-- [반응형 맛보기](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/reponsive_test.html)
+- [반응형 웹 맛보기](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/02_CSS/reponsive_test.html)
 
 
 [이전](https://github.com/SeoDongWoo1216/StudyHtml)
