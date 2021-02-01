@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>버튼 이벤트 작성</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        // 제일 많이 사용함!!!
+        window.onload = function(){ // 페이지 로드되었을때 처리하는 이벤트
+            var header = document.getElementById("header");
+            console.log(header.innerText);
+
+            setInterval(() => {
+                header.style.backgroundColor = "red";
+                header.style.color = "orange";
+                header.innerText = "Hello, World!!";
+            }, 3000);
+          
+        }
+
+        function changeColor(newColor) {
+            var header = document.getElementById("header");
+            header.style.color = newColor;
+        }
+    </script>
+</head>
+<body>
+    <h1 id = "header">Header</h1>       <!--onclick은 버튼 눌러졌을때 이벤트-->
+    <input type = "button" value = "change" onclick="changeColor('blue')"> 
+</body>
+</html>

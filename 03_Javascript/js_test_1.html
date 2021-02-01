@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>자료형, 비교연산자, 논리 연산자</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        // 자료형
+        var num_val = 24;
+        console.log("결과는 : " + num_val / 6);
+        console.log("오늘은\t\"월요일\"입니다\n 즐거운 \'한주'\ 되세요");
+        console.log(4 + 6);     // +가 10이 숫자라서 덧셈을 출력(4와 6의 합을 출력)
+        console.log("4" + "6"); // +가 46이 문자열이라서 문자열결합(4랑 6을 출력)
+        console.log(4 + "6");   // 문자열이 하나라도있으면 같이 출력된다
+
+
+        // 비교연산자(결과값은 bool형으로 출력)
+        console.log(52 > 273);  // false
+
+        console.log(10 >= 20);  // false
+        console.log(10 <= 20);  // true
+
+        console.log(10 == 20);  // false
+        console.log(10 != 20);  // true
+
+        // 논리 연산자
+        console.log("참의 반대는"+  !true); 
+
+        console.log("논리연산" + (10 < 20) && (20 < 30));  // and 교집합
+        console.log("논리연산" + (10 < 20) || (20 < 30));  // or 합집합
+
+        // 변수
+        var pi = 3.141592;
+        console.log("파이는 " + pi);
+        var num = 10;
+        console.log("정수 num은 " + num);
+        var greeting = "Hell World!";
+        console.log(greeting)
+
+
+    </script>
+
+</head>
+<body>
+    <h2>Javascript Study</h2>
+</body>
+</html>
