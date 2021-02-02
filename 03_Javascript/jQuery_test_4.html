@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>입력 양식 포커스 자동 설정 예제</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='js/jquery-3.5.1.js'></script>
+    <script>
+        $(document).ready(function(){
+            // 로드 후 처리할 이벤트 모두 이 사이에 작성할 것.
+            var input1 = $("input:nth-child(1)");  // 첫번째 칸
+            var input2 = $("input:nth-child(2)");  // 두번째 칸
+
+            // 첫번째 칸을 채우면 두번째 칸으로 포커스 이동 이벤트
+            $(input1).keydown(function(){
+                if(6 <= $(this).val().length){
+                    console.log($(this).val().length);
+                    $(input2).focus();
+                }
+            });
+        });
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" maxlength="6">-<input type="text" maxlength="7">
+        <input type="submit" maxlength="3">
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>애니메이션</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='js/jquery-3.5.1.js'></script>
+    <script>
+        $(document).ready(function(){
+            // 내부 글자를 변경
+            $('h1:nth-child(1)').text('<a href = "#"> text</a>');
+            $('h1:nth-child(2)').html('<a href = "#"> text</a>');
+
+            $("#box").css({
+                width: 100,
+                height: 100,
+                background: "red"
+            }).animate({   // .animate(속성 객체, 시간, 콜백함수) 
+                width: "400px",
+                opacity: 0.5,  // 투명도
+            }, 500);  // 1000ms = 1초 (작을수록 빨리 차고, 클수록 느리게 찬다.)
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0 auto; 
+        }
+    </style>
+</head>
+<body>
+    <div id = "box"></div>
+</body>
+</html>
