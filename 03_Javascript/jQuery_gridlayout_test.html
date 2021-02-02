@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> 플러그인 - masonry </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- jQuery 라이브러리 추가 -->
+    <script src='js/jquery-3.5.1.js'></script>
+    <script src='js/masonry.pkgd.min.js'></script>
+
+    
+    <style>
+        * {
+            margin: 0px; 
+            padding: 0px;
+        }.box{
+            background-color: indigo;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            // 100개의 타일형 이미지(박스) 생성
+            for (let index = 0; index < 100; index++) 
+            {
+                $("<div class = \"box\"></div>").css({
+                    width: "100px",
+                    height: Math.floor(Math.random() * 100) + 50 // 랜덤 수 생성
+                }).appendTo("body");               
+            }  
+
+            // masonry 그리드 적용(웹의 크기에따라 타일이미지가 배치가된다)
+            $("body").masonry({
+                columnWidth: 110
+            });
+
+            // 이미지 적용
+            $("img:nth-child(2n+1)").attr({
+                src: "images/cat03.jpg"
+            });
+
+
+
+
+            // 여기에 무한스크롤 적용하면 핀터레스트랑 똑같은거 만들 수 있음
+        });
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
