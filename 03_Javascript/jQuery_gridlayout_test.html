@@ -23,32 +23,27 @@
     </style>
 
     <script>
-        $(document).ready(function(){
-            // 100개의 타일형 이미지(박스) 생성
-            for (let index = 0; index < 100; index++) 
-            {
-                $("<div class = \"box\"></div>").css({
-                    width: "100px",
-                    height: Math.floor(Math.random() * 100) + 50 // 랜덤 수 생성
-                }).appendTo("body");               
-            }  
+          $(document).ready(function() {
+              // 100개의 타일형 이미지 생성
+            for (let index = 0; index < 200; index++) {
+                $("<img class=\"box\"></img>").css({
+                    width: '200px',
+                    height: Math.floor(Math.random() * 200) + 50
+                }).appendTo("body");
+            } 
 
-            // masonry 그리드 적용(웹의 크기에따라 타일이미지가 배치가된다)
+            // masonry 그리드 적용
             $("body").masonry({
                 columnWidth: 110
             });
 
             // 이미지 적용
-            $("img:nth-child(2n+1)").attr({
+            $("img:nth-child(2n-1)").attr({
                 src: "images/cat03.jpg"
             });
-
-
-
-
-            // 여기에 무한스크롤 적용하면 핀터레스트랑 똑같은거 만들 수 있음
         });
-
+       
+        // 여기에 무한스크롤 적용하면 핀터레스트랑 똑같은거 만들 수 있음
 
     </script>
 </head>
