@@ -23,8 +23,8 @@
 - [문서 객체 추가](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/03_Javascript/jQuery_test_5.html)
 - [무한 스크롤](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/03_Javascript/jQuery_test_6.html)
 - 플러그인
-  - [lightBox]()
-  - [Masonry]()
+  - [lightBox](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/03_Javascript/jQuery_lightbox_test.html)
+  - [Masonry](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/03_Javascript/jQuery_gridlayout_test.html)
 - [프레임 애니메이션](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/03_Javascript/jQuery_test_7.html)
 
 
