@@ -11,7 +11,11 @@
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     
-    <!-- id는 # class는 .-->
+   
+
+
+    <!-- id는 # class는 . -->
+
     <!-- 초기화 -->
     <style>
         *{ 
@@ -34,8 +38,12 @@
             position: relative;
         }
 
-        .header-search-form{float: left;}
-        .header-menu {float: right; }
+        .header-search-form{
+            float: left;
+        }
+        .header-menu {
+            float: right; 
+        }
         .header-title{
             position: absolute;
             width: 200px; height: 40px;
@@ -53,10 +61,8 @@
             padding: 10px 0;
             position: relative;
             text-align: center;
-
             font-size: 13px;
             font-weight: bold;
-
             z-index: 9999;
         }
 
@@ -106,11 +112,196 @@
             background: #E1DFDF;
             border-radius: 2px;
         }
+
+        /* 검색 양식 */
+        .header-search-form{
+            padding: 7px;
+        }
+
+        .input-search{
+            height: 26px;
+            display: block;
+            float: left;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 15px 0 0 15px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+
+        }
+
+        .input-search:focus{
+            box-shadow: inset 0 1px 1px rgba(0,0,0,0.5);
+            outline: 0;
+            border-color: rgba(82,168,236,0.8);
+        }
+
+        .input-submit{
+            display: block;
+            float: left;
+            width: 50px; height: 26px;
+            border-radius: 0 15px 15px 0;
+            border: 1px solid #cccccc;
+            margin-left: -1px;
+            /* vertical-align: top; */
+        }
     </style>
 
+    <!-- 페이퍼 스타일 -->
+    <style>
+        .paper{
+            width: 190px;
+            margin-top: 10px;
+            padding: 15px 15px 0;
+            font-size: 12px;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(34, 25, 25, 0.5);
+
+        }
+
+        .paper-description{
+            margin: 10px;
+        }
+        .paper-content{
+            margin: 10px -15px 0 -15px;
+            padding: 10px 15px;
+            background-color: #f2f0f0;
+            overflow: hidden;
+        }
+        .paper-link{
+            float: left;
+            display: block;
+        }
+        .paper-text{
+            float: left;
+            width: 150px;
+            margin-left: 10px;
+        }
+        
+        /* 섹션 스타일 */
+        #main-section{
+            width: 920px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 919px){  /* 세줄 */
+            #main-section{
+            width: 690px;
+            }
+        }
+
+        @media (max-width: 920px) and (max-width: 1149px){  /* 네줄 */
+            #main-section{
+            width: 920px;
+            }
+        }
+
+        @media (max-width: 1150px) and (max-width: 1379px){  /* 다섯줄 */
+            #main-section{
+            width: 1150px;
+            }
+        }
+
+        @media (min-width: 1380px) {     /*여섯줄*/
+            #main-section {
+                width: 1380px;
+            }
+        }
+
+        /* 라이트 박스 */
+        #darken-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            overflow-y: scroll;
+        }
+
+        #lightbox {
+            width: 700px;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #333333;
+            border-radius: 5px;
+            background-color: white;
+            /* #fffff;*/
+            box-shadow: 0 5px 5px rgba(34, 25, 25, 0.4);
+            text-align: center;
+        }
+
+        .user-information {
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .user-information-image {
+            float: left;
+            width: 70px;
+        }
+
+        .user-information-text {
+            float: right;
+            width: 620px;
+        }
+
+        .lightbox-splitter {
+            margin: 10px 0;            
+        }
+    </style>
+
+     <!-- 로드 이벤트 -->
+     <script>
+        // 풀다운 메뉴 적용
+        $(document).ready(function () {
+            $(".outer-menu").hover(function (){
+                $(this).find('.inner-menu').css('display', 'block'); // 마우스 올렸을때 메뉴 출력
+            }, function(){
+                $(this).find('.inner-menu').css('display', 'none');  // 마우스 뗐을때 사라짐
+            });
+
+            // 그리드 레이아웃 적용
+            $("#main-section").imagesLoaded(function () {
+                $("#main-section").masonry({
+                itemSelector: ".paper",
+                columnwidth: 230,
+                isAnimated: true
+                });
+            });
+
+            // 라이트 박스 함수 호출
+            $(".paper").click(function(){ showLightBox(); });
+            $("#darken-background").click( function() { hideLightBox(); });
+
+            // 라이트 박스 제거 이벤트 서포트
+            $("#lightbox").click( function(event) {
+                event.stopPropagation();   // 라이트박스 안쪽 영역을 클릭해도 라이트박스가 꺼지는 것을 방지
+            })
+        });
 
 
+        // 라이트 박스 함수 생성
+        function showLightBox(){
+            // 라이트 박스를 보이게함
+            $("#darken-background").show();
+            $("#darken-background").css("top", $(window).scrollTop());
+
+            // 스크롤 못하게 함
+            $("body").css('overflow', hidden);
+        }
+
+        function hideLightBox(){
+            // 라이트 박스를 안보이게함
+            $("#darken-background").hide();
+            $("body").css('overflow', 'auto'); 
+        }
+    </script>
 </head>
+
+
+
 <body>
     <!-- 헤더 -->
     <!-- 시멘틱 웹 : 페이지를 어떻게 구성할지 -->
@@ -164,6 +355,247 @@
     <!-- 본문 영역 -->
     <section id = "main-section">
         <!-- 페이퍼 복사 여러번 해야함-->
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class = "paper">
+            <div class = "paper-holder">
+                <a><img width="190" src="http://placehold.it/190x306"></a>
+            </div>
+            <p class = "paper-description">Lorem ipsum dolor sit amet</p>
+            <div class ="paper-content">
+                <a class = "paper-link" href = "#">
+                    <img src = "http://placehold.it/190x100">
+                </a>
+                <p class = "paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
         <div class = "paper">
             <div class = "paper-holder">
                 <a><img width="190" src="http://placehold.it/190x306"></a>
