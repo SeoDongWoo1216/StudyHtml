@@ -6,17 +6,11 @@ HTML5, CSS3, JS 학습용 리포지토리
 ### HTML5
 - [HTML소스](https://github.com/SeoDongWoo1216/StudyHtml/tree/main/01_HTML)
 
-<br>
-
 ### CSS3
 - [CSS3소스](https://github.com/SeoDongWoo1216/StudyHtml/tree/main/02_CSS)
 
-<br>
-
 ### Javascript
 - [Javascript소스](https://github.com/SeoDongWoo1216/StudyHtml/tree/main/03_Javascript)
-
-<br>
 
 ### Project
 전체 통합 프로젝트<br>
