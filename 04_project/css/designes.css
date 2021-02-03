@@ -107,3 +107,7 @@
 .lightbox-splitter {
     margin: 10px 0;            
 }
+
+#random-image{
+    border-radius: 10px;
+}

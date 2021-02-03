@@ -39,7 +39,7 @@
             });
 
             // 라이트 박스 함수 호출
-            $(".paper").click(function(){ showLightBox(); });
+            $(".paper").click(function(){ showLightBox(this); });
             $("#darken-background").click( function() { hideLightBox(); });
 
             // 라이트 박스 제거 이벤트 서포트
@@ -50,12 +50,14 @@
 
 
         // 라이트 박스 함수 생성
-        function showLightBox(){
+        function showLightBox(obj){
+             var img_src = obj.getElementsByTagName("img")[0].src; 
              // 라이트 박스 이미지 변경(랜덤수 활용)
-             $("#ramdom-image").attr({
+             $("#random-image").attr({
                 src: function() {
-                    var rnd_height = 500 + Math.floor(Math.random() * 100);
-                    return "https://placekitten.com/600/" + rnd_height;
+                    // var rnd_height = 500 + Math.floor(Math.random() * 100);
+                    // return "https://placekitten.com/600/" + rnd_height;
+                    return img_src;
                 }
             });
 
@@ -436,7 +438,7 @@
                 </div>
             </div>
             <hr class = "lightbox-splitter">
-            <img id="ramdom-image" src="https://placekitten.com/600/751">
+            <img id="random-image" src="https://placekitten.com/600/751" width = "600">
         </div>
     </div>
     <footer id = "main-footer"></footer>
