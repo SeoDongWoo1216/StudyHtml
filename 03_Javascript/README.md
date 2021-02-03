@@ -1,7 +1,9 @@
 # Javascript 기본학습
-> Javascript를 학습하며 예제 작성
+> 자바스크립트는 HTML 페이지에서 사용자 반응 등을 처리하는 스크립트를 작성하는 언어이다.
+
 
 ## Javascript 기본 문법
+> Javascript를 학습하며 예제 작성
 - [alert 사용](https://github.com/SeoDongWoo1216/StudyHtml/blob/main/03_Javascript/alert_test.html)
 - [자료형, 비교연산자, 논리 연산자](https://github.com/hugoMGSung/StudyHtml/blob/main/03_Javascript/js_test_1.html)
 - [변수, 조건문, 날짜 요소 추출, 배열, 반복문](https://github.com/hugoMGSung/StudyHtml/blob/main/03_Javascript/js_test_2.html)
