@@ -3,8 +3,8 @@
 /* 페이퍼 스타일 */
 
 .paper{
-    width: 190px;
-    margin-top: 10px;
+    width: 180px;
+    margin: 10px;
     padding: 15px 15px 0;
     font-size: 12px;
     border-radius: 10px;
@@ -66,13 +66,13 @@
     }
 }
 
-@media (max-width: 920px) and (max-width: 1149px){  /* 네줄 */
+@media (min-width: 920px) and (max-width: 1149px){  /* 네줄 */
     #main-section{
     width: 920px;
     }
 }
 
-@media (max-width: 1150px) and (max-width: 1379px){  /* 다섯줄 */
+@media (min-width: 1150px) and (max-width: 1379px){  /* 다섯줄 */
     #main-section{
     width: 1150px;
     }
