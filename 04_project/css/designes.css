@@ -7,17 +7,34 @@
     margin-top: 10px;
     padding: 15px 15px 0;
     font-size: 12px;
+    border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 1px 3px rgba(34, 25, 25, 0.5);
 }
 
 .paper-description{
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .paper-holder img{
     border-radius: 7px;
 }
+
+/* 페이퍼에 마우스 갖다댔을때 효과*/
+.paper-holder:hover{
+    /* 마우스 갖다댔을때 1.05배 확대*/
+    transform: scale(1.05);
+    
+    /* 마우스 갖다댔을때 돋보기 이미지를 넣어보려했으나 실패*/
+  /*
+    background-image: url(../images/loupe.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 100000;
+*/
+}
+
 .paper-content{
     margin: 10px -15px 0 -15px;
     padding: 10px 15px;
@@ -33,6 +50,9 @@
     width: 150px;
     margin-left: 10px;
 }
+
+
+
 
 /* 섹션 스타일 */
 #main-section{
